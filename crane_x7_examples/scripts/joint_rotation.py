@@ -27,7 +27,7 @@ def main():
     # 各ジョイントの角度を１つずつ変更する
     joint_angle = math.radians(-45)
     for i in range(7):
-        target_joint_values[i] = joint_angle
+        target_joint_values[i] = joint_angle  #arm の関節の位置のことを言っている　1 根本 2 根本と第一関節の間  3 第一関節 4 第一関節から第二関節の間 5 第二関節 6 第二関節から先端の間 7 アームの先端
         arm.set_joint_value_target(target_joint_values)
         arm.go()
         print str(i) + "-> joint_value_target (degrees):",
